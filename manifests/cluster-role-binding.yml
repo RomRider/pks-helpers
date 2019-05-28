@@ -1,0 +1,12 @@
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: ((clusterrolename))-binding
+subjects:
+- kind: User
+  name: ((username))
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: ((clusterrolename))
+  apiGroup: rbac.authorization.k8s.io
